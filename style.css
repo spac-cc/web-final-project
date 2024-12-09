@@ -1,0 +1,27 @@
+/* SCSS HEX
+russian-violet: #110A3Eff;
+dark-cyan: #5E9195ff;
+paynes-gray: #436883ff;
+ash-gray: #97A09Bff;
+desert-sand: #E0BBA3ff; */
+
+
+img[id=tristan] {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 100px;
+}
+
+html {
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 75%;
+}
+
+.container {
+    color: #FFF;
+    text-align: center;
+}
