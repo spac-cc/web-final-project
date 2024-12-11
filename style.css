@@ -1,9 +1,10 @@
-/* SCSS HEX
+/* Color Palatte
 russian-violet: #110A3Eff;
 dark-cyan: #5E9195ff;
 paynes-gray: #436883ff;
 ash-gray: #97A09Bff;
-desert-sand: #E0BBA3ff; */
+desert-sand: #E0BBA3ff;
+bone-white #F9F6EE; */
 
 
 img[id=tristan] {
@@ -11,6 +12,17 @@ img[id=tristan] {
     margin: 0 auto;
     width: 50%;
     border-radius: 100px;
+    width: 15rem;
+    height: 15rem;
+}
+
+img[id=github] {
+    margin: 10px;
+    display: inline;
+    margin-right: 100px;
+    position: relative;
+    top: 3.25em;
+    width: 32px;
 }
 
 html {
@@ -22,36 +34,58 @@ html {
 }
 
 body {
-    margin: 0;
+    font-family: "Roberto", sans-serif;
+	font-style: normal;
+	font-size: 1rem; 
+    margin: 0 auto;
     width: 100%;
 }
 
-.container {
-    color: #FFF;
-    text-align: center;
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* IDs */
 #wrapper {
-    margin: 2.5rem auto;
+    margin: 2rem auto;
+    width:100%;
+}
+
+/* Classes */
+
+.container {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #E2DFD2;
+    background-color: #110A3Eff;
+    border-radius: 15px;
+}
+
+.inner-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .navbar {
     align-items: center;
-    background-color: #00507A;
+    background-color: #5E9195ff;
     color: #FFF;
     display: grid;
     grid-template-columns: auto 1fr auto;
     padding: 0.5rem 1rem;
-    width: 100%;
 }
 
 .nav-links {
-    background-color: #00507A;
+    background-color: #5E9195ff;
     display: none;
     grid-template-columns: 1fr;
     position: absolute;
-    top: 2.5rem;
     right: 0;
+    top: 2.5rem;
     width: 100%;
 }
 
@@ -64,7 +98,7 @@ body {
 }
 
 .nav-links li {
-    border-bottom: 1px solid #B3F2FF;
+    border-bottom: 1px solid #97A09Bff;
 }
 
 .nav-links a {
@@ -83,8 +117,9 @@ body {
     cursor: pointer;
     display: block;
     font-size: 1.5rem;
-    justify-self: end;
 }
+
+/* Media Queries */
 
 @media screen and (min-width: 768px) {
 
