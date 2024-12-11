@@ -17,12 +17,20 @@ img[id=tristan] {
 }
 
 img[id=github] {
-    margin: 10px;
-    display: inline;
-    margin-right: 100px;
-    position: relative;
-    top: 3.25em;
-    width: 32px;
+    width: 24px;
+}
+
+p[id=repo] {
+    text-align: left;
+}
+
+a[id=repo] {
+    text-align: left;
+}
+
+h1,
+h2 {
+    line-height: 0;
 }
 
 html {
@@ -36,33 +44,49 @@ html {
 body {
     font-family: "Roberto", sans-serif;
 	font-style: normal;
-	font-size: 1rem; 
+	font-size: 1rem;
     margin: 0 auto;
     width: 100%;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+hr {
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #97A09Bff;
+    border-bottom: 1px solid #97A09Bff;
+ }
 
 /* IDs */
 #wrapper {
     margin: 2rem auto;
-    width:100%;
+    width: 85%;
 }
 
 /* Classes */
 
-.container {
-    height: 500px;
-    width: 100%;
-    position: absolute;
-    text-align: center;
+.container,
+.container-repo {
+    display: grid;
     color: #E2DFD2;
     background-color: #110A3Eff;
     border-radius: 15px;
+    padding: 15px;
+    margin-top: 2vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.container-repo {
+    text-align: left;
 }
 
 .inner-container {
@@ -70,12 +94,17 @@ section {
     grid-template-rows: repeat(2, 1fr);
 }
 
+.inner-container-three-row {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
 .navbar {
     align-items: center;
     background-color: #5E9195ff;
     color: #FFF;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: repeat(2, auto);
     padding: 0.5rem 1rem;
 }
 
@@ -119,6 +148,13 @@ section {
     font-size: 1.5rem;
 }
 
+.github-button {
+    justify-self: end;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
@@ -127,6 +163,10 @@ section {
         width:85%;
     }    
     
+    .navbar {
+        grid-template-columns: auto 2fr auto;
+    }
+
     .nav-links {
         background: none;
         display: grid;
@@ -151,5 +191,9 @@ section {
 
     .hamburger {
         display: none;
+    }
+    
+    html {
+        background-size: 225vh;
     }
 }
