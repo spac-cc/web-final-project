@@ -33,6 +33,22 @@ h2 {
     line-height: 0;
 }
 
+
+/* unvisited link */
+a:link {
+    color: #E0BBA3ff;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #5E9195ff;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #436883ff;
+  }
+
 html {
     background-image: url(img/background.jpg);
     background-position: center;
