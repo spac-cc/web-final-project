@@ -14,25 +14,38 @@ img[id=tristan] {
     border-radius: 100px;
     width: 15rem;
     height: 15rem;
+    object-fit: cover;
 }
 
 img[id=github] {
     width: 24px;
 }
 
+img[id=linuxDesktop] {
+    max-width: 100%;
+}
+
 p[id=repo] {
     text-align: left;
+}
+
+p[id=aboutMe] {
+    text-align: left;
+    text-indent: 48px;
 }
 
 a[id=repo] {
     text-align: left;
 }
 
+h1[id=contactHead] {
+    line-height: 1;
+}
+
 h1,
 h2 {
     line-height: 0;
 }
-
 
 /* unvisited link */
 a:link {
@@ -94,7 +107,7 @@ hr {
     background-color: #110A3Eff;
     border-radius: 15px;
     padding: 15px;
-    margin-top: 2vh;
+    margin: 2vh auto; 
 }
 
 .container {
@@ -211,5 +224,16 @@ hr {
     
     html {
         background-size: 225vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container {
+        margin: 2vh 20vw;
+    }
+
+    .container-repo {
+        margin: 2vh 10vw;
     }
 }

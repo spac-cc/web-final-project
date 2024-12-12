@@ -6,3 +6,4 @@ function toggleMenu() {
             navLinks.style.display = 'none';
         }
     }
+    
