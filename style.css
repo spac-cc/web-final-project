@@ -6,7 +6,7 @@ ash-gray: #97A09Bff;
 desert-sand: #E0BBA3ff;
 bone-white #F9F6EE; */
 
-
+/* Elements with IDs */
 img[id=tristan] {
     display: block;
     margin: 0 auto;
@@ -25,42 +25,41 @@ img[id=linuxDesktop] {
     max-width: 100%;
 }
 
-p[id=repo] {
+p[id=calcRepo],
+p[id=siteRepo],
+p[id=sourceRepo],
+p[id=aboutMe],
+a[id=calcRepo],
+a[id=siteRepo],
+a[id=sourceRepo]{
     text-align: left;
 }
 
 p[id=aboutMe] {
-    text-align: left;
     text-indent: 48px;
-}
-
-a[id=repo] {
-    text-align: left;
 }
 
 h1[id=contactHead] {
     line-height: 1;
 }
 
+/* Elements*/
 h1,
 h2 {
     line-height: 0;
 }
 
-/* unvisited link */
 a:link {
     color: #E0BBA3ff;
-  }
+}
   
-  /* visited link */
-  a:visited {
+a:visited {
     color: #5E9195ff;
-  }
+}
   
-  /* mouse over link */
-  a:hover {
+a:hover {
     color: #436883ff;
-  }
+}
 
 html {
     background-image: url(img/background.jpg);
@@ -99,10 +98,15 @@ hr {
 }
 
 /* Classes */
+.container,
+.container-repo,
+.inner-container,
+.inner-container-three-row {
+    display: grid;
+}
 
 .container,
 .container-repo {
-    display: grid;
     color: #E2DFD2;
     background-color: #110A3Eff;
     border-radius: 15px;
@@ -119,20 +123,22 @@ hr {
 }
 
 .inner-container {
-    display: grid;
     grid-template-rows: repeat(2, 1fr);
 }
 
 .inner-container-three-row {
-    display: grid;
     grid-template-rows: repeat(3, 1fr);
+}
+
+.navbar,
+.nav-links ul {
+    display: grid;
 }
 
 .navbar {
     align-items: center;
     background-color: #5E9195ff;
     color: #FFF;
-    display: grid;
     grid-template-columns: repeat(2, auto);
     padding: 0.5rem 1rem;
 }
@@ -148,7 +154,6 @@ hr {
 }
 
 .nav-links ul {
-    display: grid;
     grid-template-columns: 1fr;
     list-style: none;
     margin: 0;
@@ -170,17 +175,18 @@ hr {
     color: #B3F2FF;
 }
 
-.hamburger {
-    color: #FFF;
+.hamburger,
+.github-button {
     cursor: pointer;
     display: block;
+}
+
+.hamburger {
+    color: #FFF;
     font-size: 1.5rem;
 }
 
 .github-button {
-    justify-self: end;
-    cursor: pointer;
-    display: block;
     margin-left: auto;
 }
 
@@ -235,5 +241,19 @@ hr {
 
     .container-repo {
         margin: 2vh 10vw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .container-repo {
+        margin: 2vh 20vw;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    html {
+        min-height: 100%;
+        background-size: 100% 100%;
     }
 }
