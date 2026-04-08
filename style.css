@@ -15,6 +15,7 @@ img[id=tristan] {
     width: 15rem;
     height: 15rem;
     object-fit: cover;
+    animation: fade-down 0.5s 0.3s backwards;
 }
 
 img[id=github] {
@@ -23,6 +24,11 @@ img[id=github] {
 
 img[id=linuxDesktop] {
     max-width: 100%;
+}
+
+img[id=skill] {
+    width: 64px;
+    display: block;
 }
 
 p[id=calcRepo],
@@ -70,7 +76,7 @@ html {
 }
 
 body {
-    font-family: "Roberto", sans-serif;
+    font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-size: 1rem;
     margin: 0 auto;
@@ -95,6 +101,7 @@ hr {
 #wrapper {
     margin: 2rem auto;
     width: 85%;
+    animation: fade-down 0.5s 0.3s backwards;
 }
 
 /* Classes */
@@ -106,7 +113,8 @@ hr {
 }
 
 .container,
-.container-repo {
+.container-repo,
+.resumeContainer {
     color: #E2DFD2;
     background-color: #110A3Eff;
     border-radius: 15px;
@@ -115,6 +123,10 @@ hr {
 }
 
 .container {
+    text-align: center;
+}
+
+.resumeContainer {
     text-align: center;
 }
 
@@ -132,21 +144,21 @@ hr {
 
 .navbar,
 .nav-links ul {
-    display: grid;
+    display: flex;
 }
 
-.navbar {
+.navbar { 
     align-items: center;
-    background-color: #5E9195ff;
+    background-color: #110A3Eff;
     color: #FFF;
     grid-template-columns: repeat(2, auto);
     padding: 0.5rem 1rem;
 }
 
 .nav-links {
-    background-color: #5E9195ff;
+    background-color: #110A3Eff;
     display: none;
-    grid-template-columns: 1fr;
+    grid-template-columns: fr;
     position: absolute;
     right: 0;
     top: 2.5rem;
@@ -188,6 +200,17 @@ hr {
 
 .github-button {
     margin-left: auto;
+}
+
+.skillContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.white {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%) hue-rotate(234deg) brightness(107%) contrast(100%);
 }
 
 /* Media Queries */
@@ -255,5 +278,17 @@ hr {
     html {
         min-height: 100%;
         background-size: 100% 100%;
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1)
     }
 }
