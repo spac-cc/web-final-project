@@ -135,7 +135,7 @@ hr {
 }
 
 .inner-container {
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(auto);
 }
 
 .inner-container-three-row {
